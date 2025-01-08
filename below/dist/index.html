@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>below</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="zh-Hant">
 
 <head>
@@ -44,10 +34,12 @@
         </thead>
         <tbody>
           <tr>
-            <td>S-105</td>
-            <td>自動勾彈簧機</td>
-            <td>生產前檢驗10PCS</td>
-            <td>每周一次</td>
+              <td><label for="machine-select100"></label>
+  <select id="machine-select100" name="machine100">
+            <option value="">--</option></td>
+            <td id="machine-name100">-</td>
+            <td id="inspection-standard100">-</td>
+            <td id="inspection-frequency100">-</td>
           </tr>
         </tbody>
       </table>
@@ -141,20 +133,20 @@
       </table>
       <button id="add-machine-row" onclick="addMachineRow()">新增機台資料</button>
 
-      <div class="form-container" id="machineFormContainer">
+      <div class="form-container" id="machineFormContainer55">
         <h3 id="machine-form-title">編輯機台資料</h3>
-        <form id="machineForm">
-          <label for="machineId" id="machine-id-form">機台編號</label>
-          <input type="text" id="machineId" required>
-          <label for="machineName" id="machine-name-form">機台名稱</label>
-          <input type="text" id="machineName" required>
-          <label for="inspectionTime" id="inspection-time-form">檢驗時機</label>
-          <input type="text" id="inspectionTime" required>
-          <label for="inspectionFrequency" id="inspection-frequency-form">檢驗時間</label>
-          <input type="text" id="inspectionFrequency" required>
-          <button id="confirm" type="button" onclick="submitMachineData()">確認送出</button>
-          <button id="cancel" type="button" onclick="cancelMachineEdit()">取消</button>
-        </form>
+      <form id="machineForm">
+  <label for="new-machine-id" id="machine-id-form">機台編號</label>
+  <input type="text" id="new-machine-id" required>
+  <label for="new-machine-name" id="machine-name-form">機台名稱</label>
+  <input type="text" id="new-machine-name" required>
+  <label for="new-inspection-standard" id="inspection-time-form">檢驗時機</label>
+  <input type="text" id="new-inspection-standard" required>
+  <label for="new-inspection-frequency" id="inspection-frequency-form">檢驗時間</label>
+  <input type="text" id="new-inspection-frequency" required>
+  <button id="confirm" type="button" onclick="submitMachineData()">確認送出</button>
+  <button id="cancel" type="button" onclick="cancelMachineEdit()">取消</button>
+</form>
       </div>
     </div>
   </div>
@@ -162,9 +154,4 @@
   <script src="scripts.js"></script>
 </body>
 
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
-</body>
 </html>
