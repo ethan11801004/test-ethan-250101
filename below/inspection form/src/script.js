@@ -97,12 +97,12 @@ function editMachineRow(button) {
   editingMachineRow = row;
   const cells = row.children;
 
-  document.getElementById("machineId").value = cells[0].textContent;
-  document.getElementById("machineName").value = cells[1].textContent;
-  document.getElementById("inspectionTime").value = cells[2].textContent;
-  document.getElementById("inspectionFrequency").value = cells[3].textContent;
+  document.getElementById("machineId55").value = cells[0].textContent;
+  document.getElementById("machineName55").value = cells[1].textContent;
+  document.getElementById("inspectionTime55").value = cells[2].textContent;
+  document.getElementById("inspectionFrequency55").value = cells[3].textContent;
 
-  document.getElementById("machineFormContainer").style.display = "block";
+  document.getElementById("machineFormContainer55").style.display = "block";
 }
 
 function deleteMachineRow(button) {
@@ -112,14 +112,14 @@ function deleteMachineRow(button) {
 function addMachineRow() {
   editingMachineRow = null;
   document.getElementById("machineForm").reset();
-  document.getElementById("machineFormContainer").style.display = "block";
+  document.getElementById("machineFormContainer55").style.display = "block";
 }
 
 function submitMachineData() {
-  const machineId = document.getElementById("machineId").value;
-  const machineName = document.getElementById("machineName").value;
-  const inspectionTime = document.getElementById("inspectionTime").value;
-  const inspectionFrequency = document.getElementById("inspectionFrequency")
+  const machineId = document.getElementById("machineId55").value;
+  const machineName = document.getElementById("machineName55").value;
+  const inspectionTime = document.getElementById("inspectionTime55").value;
+  const inspectionFrequency = document.getElementById("inspectionFrequency55")
     .value;
 
   if (editingMachineRow) {
@@ -145,11 +145,11 @@ function submitMachineData() {
   }
 
   document.getElementById("machineForm").reset();
-  document.getElementById("machineFormContainer").style.display = "none";
+  document.getElementById("machineFormContainer55").style.display = "none";
 }
 
 function cancelMachineEdit() {
-  document.getElementById("machineFormContainer").style.display = "none";
+  document.getElementById("machineFormContainer55").style.display = "none";
 }
 
 const translations = {
@@ -163,14 +163,14 @@ const translations = {
     "save-records": "保存紀錄如下表:",
     "add-column": "新增欄位",
     "remove-column": "刪除欄位",
-    save: "保存",
-    confirm: "確認送出",
-    cancel: "取消",
+    "save": "保存",
+    "confirm": "確認送出",
+    "cancel": "取消",
     "date-label": "日期",
     "time-label": "時間",
     "work-order": "工單",
     "part-number": "料號",
-    operator: "作業人員",
+    "operator": "作業人員",
     "sample-number": "限度樣品編號",
     "record-date": "日期",
     "record-time": "時間",
@@ -184,7 +184,7 @@ const translations = {
     "machine-name": "機台名稱",
     "inspection-time": "檢驗時機",
     "inspection-frequency": "檢驗時間",
-    operation: "操作",
+    "operation": "操作",
     "machine-id-header": "機台編號",
     "machine-name-header": "機台名稱",
     "inspection-time-header": "檢驗時機",
@@ -195,9 +195,10 @@ const translations = {
     "machine-name-form": "機台名稱",
     "inspection-time-form": "檢驗時機",
     "inspection-frequency-form": "檢驗時間",
-    filter: "篩選",
+    "filter": "篩選",
     "export-excel": "匯出Excel",
-    language: "語言"
+    "language": "語言",
+
   },
   en: {
     "page-title": "Limit Sample Inspection",
@@ -209,14 +210,14 @@ const translations = {
     "save-records": "Saved Records as Below:",
     "add-column": "Add Column",
     "remove-column": "Remove Column",
-    save: "Save",
-    confirm: "Confirm Submit",
-    cancel: "Cancel",
+   "save": "Save",
+    "confirm": "Confirm Submit",
+    "cancel": "Cancel",
     "date-label": "Date",
     "time-label": "Time",
     "work-order": "Work Order",
     "part-number": "Part Number",
-    operator: "Operator",
+    "operator": "Operator",
     "sample-number": "Sample Number",
     "record-date": "Date",
     "record-time": "Time",
@@ -230,7 +231,7 @@ const translations = {
     "machine-name": "Machine Name",
     "inspection-time": "Inspection Time",
     "inspection-frequency": "Inspection Frequency",
-    operation: "Operation",
+    "operation": "Operation",
     "machine-id-header": "Machine ID",
     "machine-name-header": "Machine Name",
     "inspection-time-header": "Inspection Time",
@@ -241,9 +242,9 @@ const translations = {
     "machine-name-form": "Machine Name",
     "inspection-time-form": "Inspection Time",
     "inspection-frequency-form": "Inspection Frequency",
-    filter: "Filter",
+    "filter": "Filter",
     "export-excel": "Export Excel",
-    language: "Language"
+    "language": "Language",
   },
   id: {
     "page-title": "Pemeriksaan Sampel Batas",
@@ -255,14 +256,14 @@ const translations = {
     "save-records": "Rekaman yang Disimpan di bawah:",
     "add-column": "Tambah Kolom",
     "remove-column": "Hapus Kolom",
-    save: "Simpan",
-    confirm: "Konfirmasi Kirim",
-    cancel: "Batal",
+    "save": "Simpan",
+    "confirm": "Konfirmasi Kirim",
+    "cancel": "Batal",
     "date-label": "Tanggal",
     "time-label": "Waktu",
     "work-order": "Nomor Pesanan Kerja",
     "part-number": "Nomor Bagian",
-    operator: "Operator",
+    "operator": "Operator",
     "sample-number": "Nomor Sampel",
     "record-date": "Tanggal",
     "record-time": "Waktu",
@@ -276,7 +277,7 @@ const translations = {
     "machine-name": "Nama Mesin",
     "inspection-time": "Waktu Pemeriksaan",
     "inspection-frequency": "Frekuensi Pemeriksaan",
-    operation: "Operasi",
+    "operation": "Operasi",
     "machine-id-header": "ID Mesin",
     "machine-name-header": "Nama Mesin",
     "inspection-time-header": "Waktu Pemeriksaan",
@@ -287,9 +288,10 @@ const translations = {
     "machine-name-form": "Nama Mesin",
     "inspection-time-form": "Waktu Pemeriksaan",
     "inspection-frequency-form": "Frekuensi Pemeriksaan",
-    filter: "Penyaringan",
+    "filter": "Penyaringan",
     "export-excel": "Ekspor Excel",
-    language: "Bahasa"
+    "language": "Bahasa"
+   
   },
   ja: {
     "page-title": "限度サンプル検査",
@@ -301,14 +303,14 @@ const translations = {
     "save-records": "保存された記録は以下の通りです:",
     "add-column": "列の追加",
     "remove-column": "列の削除",
-    save: "保存",
-    confirm: "確認送信",
-    cancel: "キャンセル",
+    "save": "保存",
+    "confirm": "確認送信",
+    "cancel": "キャンセル",
     "date-label": "日付",
     "time-label": "時間",
     "work-order": "作業指示書",
     "part-number": "部品番号",
-    operator: "オペレーター",
+    "operator": "オペレーター",
     "sample-number": "サンプル番号",
     "record-date": "日付",
     "record-time": "時間",
@@ -322,7 +324,7 @@ const translations = {
     "machine-name": "機械名",
     "inspection-time": "検査時点",
     "inspection-frequency": "検査頻度",
-    operation: "操作",
+    "operation": "操作",
     "machine-id-header": "機械ID",
     "machine-name-header": "機械名",
     "inspection-time-header": "検査時点",
@@ -333,9 +335,10 @@ const translations = {
     "machine-name-form": "機械名",
     "inspection-time-form": "検査時点",
     "inspection-frequency-form": "検査頻度",
-    filter: "フィルタ",
+    "filter": "フィルタ",
     "export-excel": "Excelをエクスポート",
-    language: "言語"
+    "language": "言語",
+
   }
 };
 
@@ -357,3 +360,81 @@ function changeLanguage() {
     }
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  let machineData = [
+    {
+      id: "S-105",
+      name: "自動勾彈簧機",
+      standard: "生產前檢驗10PCS",
+      frequency: "每周一次"
+    }
+  ];
+
+  const machineSelect100 = document.getElementById("machine-select100");
+
+  function renderMachineSelect100() {
+    machineSelect100.innerHTML = '<option value="">-------------</option>';
+    machineData.forEach(machine => {
+      const option = document.createElement("option");
+      option.value = machine.id;
+      option.textContent = machine.id;
+      machineSelect100.appendChild(option);
+    });
+  }
+
+  renderMachineSelect100();
+
+  machineSelect100.addEventListener("change", function () {
+    const selectedMachine = machineData.find(machine => machine.id === this.value);
+    if (selectedMachine) {
+      document.getElementById("machine-name100").textContent = selectedMachine.name;
+      document.getElementById("inspection-standard100").textContent = selectedMachine.standard;
+      document.getElementById("inspection-frequency100").textContent = selectedMachine.frequency;
+    } else {
+      document.getElementById("machine-name100").textContent = "-";
+      document.getElementById("inspection-standard100").textContent = "-";
+      document.getElementById("inspection-frequency100").textContent = "-";
+    }
+  });
+
+  document.getElementById("confirm").addEventListener("click", function () {
+    const newMachineId = document.getElementById("new-machine-id").value.trim();
+    const newMachineName = document.getElementById("new-machine-name").value.trim();
+    const newInspectionStandard = document.getElementById("new-inspection-standard").value.trim();
+    const newInspectionFrequency = document.getElementById("new-inspection-frequency").value.trim();
+
+    if (!newMachineId || !newMachineName || !newInspectionStandard || !newInspectionFrequency) {
+      alert("請填寫所有欄位！");
+      return;
+    }
+
+    machineData.push({
+      id: newMachineId,
+      name: newMachineName,
+      standard: newInspectionStandard,
+      frequency: newInspectionFrequency
+    });
+
+    const tableBody = document.querySelector("#machineTable tbody");
+    const newRow = tableBody.insertRow();
+    newRow.innerHTML = `
+      <td>${newMachineId}</td>
+      <td>${newMachineName}</td>
+      <td>${newInspectionStandard}</td>
+      <td>${newInspectionFrequency}</td>
+      <td>
+        <button class="edit-button" onclick="editMachineRow(this)">編輯</button>
+        <button class="delete-button" onclick="deleteMachineRow(this)">刪除</button>
+      </td>
+    `;
+
+    renderMachineSelect100();
+
+    document.getElementById("new-machine-id").value = "";
+    document.getElementById("new-machine-name").value = "";
+    document.getElementById("new-inspection-standard").value = "";
+    document.getElementById("new-inspection-frequency").value = "";
+
+    alert("機台資料新增成功！");
+  });
+});
